@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WS.Models.SalesType>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sales_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tax_included)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.factor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inactive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sales_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tax_included)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.factor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inactive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

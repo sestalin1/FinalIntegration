@@ -1,0 +1,50 @@
+﻿@model WS.Models.SalesType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalesType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sales_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sales_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tax_included)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tax_included)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.factor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.factor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.inactive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.inactive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
